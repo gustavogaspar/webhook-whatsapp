@@ -1,0 +1,29 @@
+{
+  "name": "oda-whatsapp",
+  "version": "1.0.0",
+  "description": "ODA WhatsApp Integration",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "node_modules/.bin/nodemon --inspect src/server.js",
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@orahub.oraclecorp.com:ateam/oda-whatsapp.git"
+  },
+  "author": "tamer.qumhieh@oracle.com",
+  "license": "ISC",
+  "dependencies": {
+    "@oracle/bots-node-sdk": "^2.1.3",
+    "axios": "^0.18.0",
+    "express": "^4.16.4",
+    "https-proxy-agent": "^2.2.1",
+    "log4js": "^4.0.1",
+    "smooch-core": "^8.1.0",
+    "underscore": "^1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
