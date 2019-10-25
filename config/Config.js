@@ -1,5 +1,5 @@
 // ODA Details
-module.exports.ODA_WEBHOOK_URL = process.env.BOT_WEBHOOK_URL || 'ODA_WEBHOOK_URL';
+module.exports.ODA_WEBHOOK_URL = '';
 module.exports.ODA_WEBHOOK_SECRET = process.env.BOT_WEBHOOK_SECRET || 'ODA_WEBHOOK_SECRET';
 
 // Smooch Details
