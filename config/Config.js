@@ -1,16 +1,16 @@
 // ODA Details
 module.exports.ODA_WEBHOOK_URL = '';
-module.exports.ODA_WEBHOOK_SECRET = process.env.BOT_WEBHOOK_SECRET || 'ODA_WEBHOOK_SECRET';
+module.exports.ODA_WEBHOOK_SECRET = '';
 
 // Smooch Details
-exports.SMOOCH_APP_ID = process.env.SMOOCH_APP_ID || 'SMOOCH_APP_ID';
-exports.SMOOCH_KEY_ID = process.env.SMOOCH_KEY_ID || 'SMOOCH_KEY_ID';
-exports.SMOOCH_SECRET = process.env.SMOOCH_SECRET || 'SMOOCH_SECRET';
-exports.SMOOCH_WEBHOOK_SECRET = process.env.SMOOCH_WEBHOOK_SECRET || 'SMOOCH_WEBHOOK_SECRET';
+exports.SMOOCH_APP_ID = '';
+exports.SMOOCH_KEY_ID = '';
+exports.SMOOCH_SECRET = '';
+exports.SMOOCH_WEBHOOK_SECRET = '';
 
 // General Details
 exports.PROXY = process.env.PROXY || process.env.http_proxy;
-exports.PORT = process.env.PORT || 8004;
+exports.PORT = 3000;
 
 // WhatsApp Sender event IDs
 exports.EVENT_QUEUE_MESSAGE_TO_SMOOCH = "100";
