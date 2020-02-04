@@ -43,7 +43,6 @@ class WhatsAppSender {
 
         logger.info('WhatsApp Sender initialized');
     }
-
     /**
      * Setup Queue events.
      * @returns null
@@ -110,7 +109,7 @@ class WhatsAppSender {
         }
 
     }
-    
+
     /**
      * Queue Message to be sent to Smooch.
      * @returns null
