@@ -41,7 +41,7 @@ webhook.on(WebhookEvent.MESSAGE_RECEIVED, message => {
 
 // send messages to bot
 app.post('/user/message', async (req, res) => {
-    // Make sure Request is coming from Smooch by inspecting x-api-key header value
+     // Make sure Request is coming from Smooch by inspecting x-api-key header value
     if (req.header('x-api-key') && req.header('x-api-key') == Config.SMOOCH_WEBHOOK_SECRET) {
         try {
             logger.info('Received a message from WhatsApp, processing message before sending to ODA.');
@@ -60,9 +60,10 @@ app.post('/user/message', async (req, res) => {
         let errorMessage = Errors.FORBIDDEN.message;
         logger.error(errorMessage);
         res.status(Errors.FORBIDDEN.code).send(Errors.FORBIDDEN);
-    }
+            }
 });
 
 app.listen(Config.PORT, function () {
     logger.info('Server listening on port %s', Config.PORT);
 });
+
