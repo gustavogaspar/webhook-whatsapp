@@ -19,7 +19,6 @@ class WhatsApp {
     constructor() {
         this.whatsAppSender = new WhatsAppSender();
     }
-
     /**
      * Recieves a message from smooch and convert to ODA payload
      * @returns {object []} array of messages in ODA format.
@@ -151,7 +150,6 @@ class WhatsApp {
             self.whatsAppSender.queueMessage(userId, message);
         });
     }
-
     /**
      * Process Smooch messages and convert to ODA message format.
      * @returns {object []} Array of ODA messages.
@@ -192,7 +190,6 @@ class WhatsApp {
 
         return odaMessages;
     }
-
     /**
      * Process Smooch delivery messages.
      * @returns null
@@ -208,7 +205,7 @@ class WhatsApp {
     /**
      * Process Smooch buttons and conver to ODA message format.
      * @returns {object []} Array of ODA messages.
-     * @param {string} trigger 
+     * @param {string} trigger
      * @param {object []} payload - array of smooch buttons
      */
     _processWhatsAppButtons(trigger, payload, userId) {
@@ -281,7 +278,6 @@ class WhatsApp {
         return messagePayload;
 
     }
-
     /**
      * Convert Smooch Media (images and attachments) messages to ODA attachements.
      * @returns {object} ODA attachment message.
@@ -474,18 +470,6 @@ class WhatsApp {
 
         if (actions && actions.length) {
             let response = "";
-            // Group Actions by type;
-            actions = _.groupBy(actions, 'type');
-
-            let postbackActions = _.pick(actions, ['postback']);
-            let otherActions = _.omit(actions, ['postback']);
-
-            // process postback buttons lastly
-            response = generateActions(otherActions);
-            response = response.concat(generateActions(postbackActions));
-
-            function generateActions(actions) {
-                let response = "";
                 for (var key in actions) {
                     actions[key].forEach(action => {
                         let actionAstext = self._createSmoochAction(action)
