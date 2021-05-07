@@ -21,7 +21,7 @@
     "https-proxy-agent": "^2.2.1",
     "log4js": "^4.0.1",
     "smooch-core": "^8.1.0",
-    "underscore": "^1.9.1"
+    "underscore": "^1.12.1"
   },
   "devDependencies": {
     "nodemon": "^1.18.9"
